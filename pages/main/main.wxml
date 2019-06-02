@@ -1,0 +1,18 @@
+<!--pages/main/main.wxml-->
+<view class="main">
+        <view class="" hover-class="none" hover-stop-propagation="false">
+            <swiper indicator-dots="{{indicatorDots}}"
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{postList}}">
+              <swiper-item catchtouchmove="stopTouchMove">
+                      <view class="title web-font">{{item.name}}</view>  
+                      <block wx:for="{{item.content}}" wx:for-index="i" wx:for-item="option">
+                            <view class="web-font">{{option}}</view>
+                      </block>
+                          
+              </swiper-item>
+            </block>
+          </swiper>
+        </view>
+              
+</view>

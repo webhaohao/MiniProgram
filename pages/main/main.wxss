@@ -1,0 +1,11 @@
+/* pages/main/main.wxss */
+.main{
+    background:url('https://www.happyhao.top/bg2.png');
+    width:100%;
+    height:100%;
+    background-size:cover;
+    position: fixed;
+}
+swiper swiper-item{
+     color:#195d6a;
+}
