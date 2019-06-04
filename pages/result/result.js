@@ -5,21 +5,40 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+        info:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+        wx.setNavigationBarTitle({
+          title: "清华经管学院EMBA"
+        })
+        wx.setNavigationBarColor({
+          frontColor: "#ffffff",/*标题颜色，这里貌似仅支持 #ffffff 和 #000000 */
+          backgroundColor: "#f7d6a6",/*背景色 十六进制即可*/
+          animation: {/*动画*/
+            duration: 400,
+            timingFunc: 'easeIn'
+          }
+        })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+        var self = this;
+        wx.getStorage({
+          key: 'info',
+          success (res) {
+              console.log(res.data)
+              self.setData({
+                   info:res.data 
+              })
+          }
+        })
   },
 
   /**

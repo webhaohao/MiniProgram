@@ -8,7 +8,8 @@ Page({
       postList :postData.postList,
       duration:500,
       vertical:true,
-      currentTab:0
+      currentTab:0,
+      active:-1
   },
   stopTouchMove:function(){
       return false;
@@ -19,7 +20,7 @@ Page({
   onLoad: function (options) {
       console.log(this.data.postList);
       wx.setNavigationBarTitle({
-        title: "chanegTitle"
+        title: "清华经管学院EMBA"
       })
       wx.setNavigationBarColor({
         frontColor: "#ffffff",/*标题颜色，这里貌似仅支持 #ffffff 和 #000000 */
@@ -31,12 +32,56 @@ Page({
       })
   },
   optionTap:function(e){
-        console.log("点击答案");
         console.log(e.target.dataset);
+        let postList = this.data.postList;
+        postList[e.target.dataset.current].select = e.target.dataset.active;
         let current=e.target.dataset.current+1;
+        let count = 0;
+        let obj = {};
         this.setData({
-            currentTab: current
+            postList:postList  
         })
+        if(current == postList.length){
+              console.log('答题结束');
+              for(let i=0;i<current;i++){
+                  if(postList[i].select==postList[i].daan){
+                      count++;
+                  }
+              }
+              console.log(count);
+              if(count<=8 && count>=6){
+                    obj ={
+                        title:'状元',
+                        des:'别人眼中的超级学霸，只有清华经管EMBA适合你!'
+                    }
+              }
+              else if(count<=5 && count>=3){
+                    obj ={
+                      title:'榜眼',
+                      des:'成为卓越只有一步之遥，清华经管EMBA助你一臂之力!'
+                    }
+              }
+              else{
+                    obj ={
+                      title:'探花',
+                      des:'读书只为成就更好的你，选择报考清华经管EMBA吧！'
+                    }
+              }
+              wx.setStorage({
+                  key:"info",
+                  data:obj
+              })
+              wx.navigateTo({
+                  url: '../result/result'
+              })
+        }
+        else{
+            this.setData({
+              currentTab: current  
+            })
+        }
+      
+       
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

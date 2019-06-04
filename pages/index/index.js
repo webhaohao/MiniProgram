@@ -22,7 +22,7 @@ Page({
   },
   onLoad: function () {
     wx.setNavigationBarTitle({
-      title: "chanegTitle"
+      title: "清华经管学院EMBA"
     })
     wx.setNavigationBarColor({
       frontColor: "#ffffff",/*标题颜色，这里貌似仅支持 #ffffff 和 #000000 */

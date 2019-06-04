@@ -13,6 +13,11 @@ swiper swiper-item{
 }
 .content{
      width:100%; 
+     position: absolute;
+     bottom:342rpx;
+     left:0;
+     padding:0rpx 50rpx;
+     box-sizing:border-box;
 }
 .swiper{
     position: fixed;
@@ -24,12 +29,25 @@ swiper swiper-item{
     width:100%;
     height:100%;
     left:0rpx;
-    padding:0rpx 50rpx;
-    box-sizing:border-box;
 }
 .content .title{
     margin-bottom:54rpx;
 }
 .option{
     margin-bottom:20rpx;
+    display:flex;
+    align-items:center;
+ }
+ .option view:first-child{
+    width:43rpx;
+    height:43rpx;
+    background-color:#fff;
+    border-radius:50%; 
+    margin-right:20rpx;   
+ }
+ .option view:last-child{
+     width:calc(100% - 63rpx);
+ }
+ .option view.active{
+    background-color:#125c69;
  }

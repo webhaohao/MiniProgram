@@ -8,5 +8,24 @@
             <view class="text">恭喜您已被录取！</view>
             <view class="text">在清华经管EMBA学霸测试中鉴定为</view>  
       </view>
-      <view class="result">状元</view>
+      <view class="result">{{info.title}}</view>
+      <view class="comment">
+            <view class="comment_con">
+                     <image src="../images/titleBg.png" mode="widthFix"></image>
+                     <text>{{info.des}}</text>      
+            </view>    
+      </view>
+      <view class="msg">
+              <view>
+                    <image src="../images/code.png"  mode="widthFix"></image>
+              </view>
+              <view>
+                   <text>扫一扫</text> 
+                   <text>了解更多</text> 
+                   <text>入学须知</text>
+              </view>    
+      </view>
+      <view class="create">
+              <view>点击生成你的录取通知</view>    
+      </view>
 </view>

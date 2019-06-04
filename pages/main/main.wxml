@@ -1,6 +1,6 @@
 <!--pages/main/main.wxml-->
 <view class="main">
-        <view class="" hover-class="none" hover-stop-propagation="false">
+        <view class="">
             <swiper indicator-dots="{{indicatorDots}}"
                     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
                     current="{{currentTab}}"
@@ -12,7 +12,10 @@
                       <view class="content">
                       <view class="title web-font">{{item.name}}</view>  
                         <block wx:for="{{item.content}}" wx:for-index="i" wx:for-item="option">
-                                <view class="web-font option" bindtap="optionTap" data-current="{{index}}">{{option}}</view>
+                                <view class="web-font option" catchtap="optionTap" data-current="{{index}}" data-active="{{i}}">
+                                       <view  data-current="{{index}}" class="{{item.select==i?'active':''}}" data-active="{{i}}"></view> 
+                                       <view  data-current="{{index}}" data-active="{{i}}">{{option}}</view>
+                                </view>
                         </block> 
                      </view>
               </swiper-item>
