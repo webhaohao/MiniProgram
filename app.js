@@ -6,19 +6,19 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
     //加载字体
-    wx.loadFontFace({
-      family: 'webfont',
-      source: 'url("https://www.happyhao.top/FZSEJW.TTF")',
-      success: function (res) {
-        console.log(res.status) //  loaded
-      },
-      fail: function (res) {
-        console.log(res.status) //  error
-      },
-      complete: function (res) {
-        console.log(res.status);
-      }
-    });
+    // wx.loadFontFace({
+    //   family: 'webfont',
+    //   source: 'url("https://www.happyhao.top/FZSEJW.TTF")',
+    //   success: function (res) {
+    //     console.log(res.status) //  loaded
+    //   },
+    //   fail: function (res) {
+    //     console.log(res.status) //  error
+    //   },
+    //   complete: function (res) {
+    //     console.log(res.status);
+    //   }
+    // });
     // 登录
     wx.login({
       success: res => {

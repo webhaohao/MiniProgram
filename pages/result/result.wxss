@@ -1,0 +1,26 @@
+/* pages/result/result.wxss */
+.main{
+    background:url('https://www.happyhao.top/bg3.png');
+    width:100%;
+    height:100%;
+    background-size:auto 100%;
+    position: fixed;
+}
+.title{
+    margin-top:230rpx;
+    text-align:center;
+}
+.title image{
+    width:690rpx;    
+}
+.info{
+    color:#185b6b;
+    text-align:center;
+    margin-top:27rpx;
+}
+.result{
+    font-size:150rpx;
+    color:#1f1f3b;
+    text-align:center;
+    letter-spacing:95rpx;
+}

@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-      postList :postData.postList
+      postList :postData.postList,
+      duration:500,
+      vertical:true,
+      currentTab:0
   },
   stopTouchMove:function(){
       return false;
@@ -15,8 +18,26 @@ Page({
    */
   onLoad: function (options) {
       console.log(this.data.postList);
+      wx.setNavigationBarTitle({
+        title: "chanegTitle"
+      })
+      wx.setNavigationBarColor({
+        frontColor: "#ffffff",/*标题颜色，这里貌似仅支持 #ffffff 和 #000000 */
+        backgroundColor: "#bce1df",/*背景色 十六进制即可*/
+        animation: {/*动画*/
+          duration: 400,
+          timingFunc: 'easeIn'
+        }
+      })
   },
-
+  optionTap:function(e){
+        console.log("点击答案");
+        console.log(e.target.dataset);
+        let current=e.target.dataset.current+1;
+        this.setData({
+            currentTab: current
+        })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

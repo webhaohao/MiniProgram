@@ -1,0 +1,12 @@
+<!--pages/result/result.wxml-->
+
+<view class="main">
+      <view class="title">
+            <image src="../images/title.png" alt="" mode="widthFix"></image>
+      </view>
+      <view class="info">
+            <view class="text">恭喜您已被录取！</view>
+            <view class="text">在清华经管EMBA学霸测试中鉴定为</view>  
+      </view>
+      <view class="result">状元</view>
+</view>

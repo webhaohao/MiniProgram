@@ -2,14 +2,19 @@
 <view class="main">
         <view class="" hover-class="none" hover-stop-propagation="false">
             <swiper indicator-dots="{{indicatorDots}}"
-                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
+                    current="{{currentTab}}"
+                    vertical="{{vertical}}"
+                    class="swiper"
+            >
             <block wx:for="{{postList}}">
               <swiper-item catchtouchmove="stopTouchMove">
+                      <view class="content">
                       <view class="title web-font">{{item.name}}</view>  
-                      <block wx:for="{{item.content}}" wx:for-index="i" wx:for-item="option">
-                            <view class="web-font">{{option}}</view>
-                      </block>
-                          
+                        <block wx:for="{{item.content}}" wx:for-index="i" wx:for-item="option">
+                                <view class="web-font option" bindtap="optionTap" data-current="{{index}}">{{option}}</view>
+                        </block> 
+                     </view>
               </swiper-item>
             </block>
           </swiper>
