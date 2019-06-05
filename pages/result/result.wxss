@@ -40,6 +40,7 @@
     left:163rpx;
     top:26rpx;
     color:#fff;  
+    font-size:34rpx;
 }
 .msg {
     display:flex;

@@ -13,11 +13,9 @@ swiper swiper-item{
 }
 .content{
      width:100%; 
-     position: absolute;
-     bottom:342rpx;
-     left:0;
      padding:0rpx 50rpx;
      box-sizing:border-box;
+     margin-top:159rpx;
 }
 .swiper{
     position: fixed;
@@ -50,4 +48,7 @@ swiper swiper-item{
  }
  .option view.active{
     background-color:#125c69;
+ }
+ .option image{
+      width:200rpx;
  }

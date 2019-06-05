@@ -14,7 +14,10 @@
                         <block wx:for="{{item.content}}" wx:for-index="i" wx:for-item="option">
                                 <view class="web-font option" catchtap="optionTap" data-current="{{index}}" data-active="{{i}}">
                                        <view  data-current="{{index}}" class="{{item.select==i?'active':''}}" data-active="{{i}}"></view> 
-                                       <view  data-current="{{index}}" data-active="{{i}}">{{option}}</view>
+                                       <view  data-current="{{index}}" data-active="{{i}}">
+                                                <rich-text data-current="{{index}}" data-active="{{i}}" wx:if="{{option.option}}">{{option.option}}</rich-text>
+                                                <image src="{{option.pic}}" wx:if="{{option.pic}}" mode="widthFix"></image>
+                                        </view>
                                 </view>
                         </block> 
                      </view>
