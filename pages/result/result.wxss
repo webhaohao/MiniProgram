@@ -38,7 +38,7 @@
     position: absolute;
     width:460rpx;
     left:163rpx;
-    top:26rpx;
+    top:7rpx;
     color:#fff;  
     font-size:34rpx;
 }

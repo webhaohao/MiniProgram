@@ -12,7 +12,7 @@
                       <view class="content">
                       <view class="title web-font">{{item.name}}</view>  
                         <block wx:for="{{item.content}}" wx:for-index="i" wx:for-item="option">
-                                <view class="web-font option" catchtap="optionTap" data-current="{{index}}" data-active="{{i}}">
+                                <view class="web-font option {{item.animated ? 'animated':''}}" style="animation-delay:{{i/5+'s'}}" catchtap="optionTap" data-current="{{index}}" data-active="{{i}}">
                                        <view  data-current="{{index}}" class="{{item.select==i?'active':''}}" data-active="{{i}}"></view> 
                                        <view  data-current="{{index}}" data-active="{{i}}">
                                                 <rich-text data-current="{{index}}" data-active="{{i}}" wx:if="{{option.option}}">{{option.option}}</rich-text>

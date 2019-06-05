@@ -11,7 +11,8 @@ var local_database = [{
         "pic":""
       }
     ],
-    "select":"-1" 
+    "select":"-1",
+    "animated":true
   },
   {
     "name": "二校门是清华大学著名的网红打卡地。 请问“清华园”三个字是谁提的？",
@@ -30,7 +31,8 @@ var local_database = [{
         "pic":""
       }
     ], 
-    "select":"-1" 
+    "select":"-1",
+    "animated":false 
   },
   {
     "name": "今年是清华大学经济管理学院建院35周年，朱镕基为首任院长，清华经管学院的使命是？",
@@ -44,7 +46,8 @@ var local_database = [{
        }
       
     ],
-    "select":"-1" 
+    "select":"-1",
+    "animated":false 
   },
   {
     "name":"4.在清华，你将始终与大师同行。清华经管顾问委员会委员马克·扎克伯格就曾在2015年走进过清华经管EMBA的课堂。请问他在哪里创办的脸书（Facebook）？",
@@ -63,7 +66,8 @@ var local_database = [{
         "pic" :""
         }
       ],
-    "select":"-1" 
+    "select":"-1",
+    "animated":false 
   },
   {
     "name":"一直以来，清华经管EMBA的同学都有“最严谨、最能学”的江湖称号。以下哪些笔记属于EMBA同学的风格：",
@@ -79,7 +83,8 @@ var local_database = [{
           "pic" :"../images/option3.jpg"
           }, 
     ],
-    "select":"-1" 
+    "select":"-1" ,
+    "animated":false
   },
   {
     "name":"未来科技EMBA师资雄厚，大师云集：经典理论原创人、两院院士、科学大家、经管名师、人文艺术领袖等等，请问清华大学目前有90名两院院士，以下哪些院士是项目师资？",
@@ -101,7 +106,8 @@ var local_database = [{
       "pic" :""
       }
     ],
-    "select":"-1" 
+    "select":"-1",
+    "animated":false 
   },
   {
     "name":"“无体育、不清华”是清华源远流长的传统，清华经管EMBA传统是将学习成果投入在课下实践。以下哪种情况会不会是EMBA同学上课后发生的？ ",
@@ -120,7 +126,8 @@ var local_database = [{
         "pic":""
       }
     ],
-    "select":"-1" 
+    "select":"-1",
+    "animated":false 
   },
   {
     "name":"未来科技EMBA旨在培养掌握核心技术、引领中国未来、贡献人类社会的科技型战略企业家。项目的招生对象是？",
@@ -147,7 +154,8 @@ var local_database = [{
         "pic":""
       }
     ],
-    "select":"-1" 
+    "select":"-1",
+    "animated":false 
   }
   ]
   module.exports = {

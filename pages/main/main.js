@@ -36,6 +36,7 @@ Page({
         let postList = this.data.postList;
         postList[e.target.dataset.current].select = e.target.dataset.active;
         let current=e.target.dataset.current+1;
+        postList.length>current && (postList[current].animated = true); 
         let count = 0;
         let obj = {};
         this.setData({

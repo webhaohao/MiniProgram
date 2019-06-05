@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-        info:''
+        info:'',
+        canvasHidden:true
   },
 
   /**
@@ -23,6 +24,15 @@ Page({
             timingFunc: 'easeIn'
           }
         })
+          //获取用户设备信息，屏幕宽度
+          wx.getSystemInfo({
+            success: res => {
+              that.setData({
+                screenWidth: res.screenWidth
+              })
+              console.log(that.data.screenWidth)
+            }
+          })
   },
 
   /**
@@ -59,7 +69,6 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
   },
 
   /**
@@ -80,6 +89,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+
+  },
+  //保存至相册
+  saveImageToPhotosAlbum: function () {
 
   }
 })
