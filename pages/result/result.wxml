@@ -28,5 +28,5 @@
       <view class="create">
               <view bindtap='saveImageToPhotosAlbum'>点击生成你的录取通知</view>    
       </view>
-      <canvas canvas-id='share' style='width:375px;height:580px'  hidden='{{canvasHidden}}'></canvas>
+      <canvas canvas-id='share' style='width:750px;height:1334px'  hidden='{{canvasHidden}}'></canvas>
 </view>
