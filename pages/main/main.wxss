@@ -40,6 +40,13 @@ swiper swiper-item{
     margin-bottom:24rpx;
     font-size:36rpx;
 }
+.swiper swiper-item:last-child .options{
+    display:flex;
+    flex-wrap:wrap;
+}
+.swiper swiper-item:last-child .options>view{
+    width:50%;
+}
 .option{
     margin-bottom:20rpx;
     display:flex;
