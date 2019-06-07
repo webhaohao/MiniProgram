@@ -15,7 +15,7 @@ swiper swiper-item{
      width:100%; 
      padding:0rpx 50rpx;
      box-sizing:border-box;
-     margin-top:159rpx;
+     margin-top:20rpx;
 }
 .swiper{
     position: fixed;
@@ -27,15 +27,24 @@ swiper swiper-item{
     width:100%;
     height:100%;
     left:0rpx;
+    top:0rpx;
+}
+.swiper swiper-item:nth-child(5) .option image{
+        width:320rpx;
+}
+.swiper swiper-item rich-text{
+    word-break:break-all;
+    text-align: justify; 
 }
 .content .title{
-    margin-bottom:54rpx;
+    margin-bottom:24rpx;
+    font-size:36rpx;
 }
 .option{
     margin-bottom:20rpx;
     display:flex;
     align-items:center;
-   
+    font-size:36rpx;
     /* animation:returnToNormal 2s infinite; */
  }
  .option.animated{
@@ -59,9 +68,60 @@ swiper swiper-item{
  .option image{
       width:200rpx;
  }
+ .animationE{
+     position: relative;
+ }
+ .sun{
+      width:114rpx;
+      position: absolute;
+      top:192rpx;
+      left:51rpx;
+      z-index:-10;
+ }
+ .intrPic{
+      width:300rpx;
+ }
  .tada {
     -webkit-animation-name: tada;
     animation-name: tada;
+ }
+ .cloud1{
+     width:131rpx;
+     position: absolute;
+     top:135rpx;
+     left:100%;
+     z-index:-10;
+ }
+ .cloud2{
+    width:102rpx;
+    position: absolute;
+    top:306rpx;
+    left:100%;
+    z-index:-10;
+}
+.cloud3{
+    width:93rpx;
+    position: absolute;
+    top:333rpx;
+    left:100%;
+    z-index:-10;
+}
+.plane{
+    width:153rpx;
+    position: absolute;
+    top:234rpx;
+    left:100%;
+    z-index:-10;
+}
+ .fly{
+   animation: fly-1 25s linear infinite;
+ }   
+ .cloudMove{
+    animation: cloudMove 20s linear infinite;
+ }
+ .cloudMoves{
+    animation: cloudMove 20s linear infinite;
+    animation-delay:5s;  
  }
  @keyframes returnToNormal {
     0% {
@@ -75,36 +135,40 @@ swiper swiper-item{
       transform: none;
     }
 }
-@keyframes tada {
+@keyframes cloudMove{
+    from{
+       left:100%;
+    } 
+    to{
+       left:-100%;
+    }
+}
+@keyframes fly-1{
     0% {
-      -webkit-transform: scale3d(1, 1, 1);
-      -ms-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
+        transform: translate(0, 0) rotate(0deg) scale(1);
     }
-  
-    10%, 20% {
-      -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
-      -ms-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
-      transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    5% {
+        transform: translate(-15px, -2px) rotate(10deg) scale(1.2);
     }
-  
-    30%, 50%, 70%, 90% {
-      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-      -ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    20% {
+        transform: translate(-130px, -2px) rotate(-20deg) scale(1.5);
     }
-  
-    40%, 60%, 80% {
-      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-      -ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    40% {
+        transform: translate(-280px, -40px) rotate(10deg) scale(0.8);
+        opacity: .8;
     }
-  
+    60% {
+        transform: translate(-500px, -90px) rotate(30deg) scale(0.6);
+        opacity: .6;
+    }
+    80% {
+        transform: translate(-700px, -140px) rotate(50deg) scale(0.2);
+        opacity: .2;
+    }
     100% {
-      -webkit-transform: scale3d(1, 1, 1);
-      -ms-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
+        transform: translate(-1000px, -200px) rotate(60deg) scale(0);
+        opacity: 0;
     }
-  }
+}
   
  

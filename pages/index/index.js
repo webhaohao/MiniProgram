@@ -28,10 +28,20 @@ Page({
       frontColor: "#ffffff",/*标题颜色，这里貌似仅支持 #ffffff 和 #000000 */
       backgroundColor: "#fad6c6",/*背景色 十六进制即可*/
       animation: {/*动画*/
-        duration: 400,
+        duration:100,
         timingFunc: 'easeIn'
       }
     })
+    setInterval(()=>{
+      this.setData({
+          isTada:true,
+      })
+      setTimeout(()=>{
+            this.setData({
+              isTada:false,
+            })
+        },2000);
+    }, 3000);
   },
   getUserInfo: function(e) {
     console.log(e)

@@ -12,7 +12,11 @@
   </view>
 </view> -->
 <view class="section">
-  <view class="web-font start_btn" bindtap="jump">开始答题</view>  
+  <!-- <view class="leftBg animated fadeInLeft"></view>
+  <view class="rightBg animated fadeInRight"></view> -->
+  <view class="web-font start_btn {{isTada?'animated tada':''}}" bindtap="jump">
+            <view>开始答题</view> 
+  </view>  
 </view>
 
 

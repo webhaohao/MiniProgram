@@ -8,7 +8,9 @@ Page({
         info:'',
         canvasHidden:true,
         shareImgSrc:'../images/bg3.png',
-        titlePath:'../images/title.png'
+        titlePath:'../images/title.png',
+        msgPath:'../images/msg.png',
+        codePath:'../images/code.png'
   },
 
   /**
@@ -92,7 +94,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+        return {
+          title: '快来答题，领取你的录取通知书！',
+          path: `pages/index/index` // 分享后打开的页面
+        }
   },
   //保存至相册
   saveImageToPhotosAlbum: function () {
@@ -100,8 +105,16 @@ Page({
       const ctx = wx.createCanvasContext('share');
       var bgImgPath = that.data.shareImgSrc;
       var titlePath = that.data.titlePath;
+      var msgPath  =  that.data.msgPath;
+      var title = that.data.info.title;
+      var desPath = that.data.info.des;
+      var codePath = that.data.codePath;
       ctx.drawImage(bgImgPath, 0, 0, 750, 1334);
       ctx.drawImage(titlePath,20,174,690,206);
+      ctx.drawImage(msgPath,72,390,614,106);
+      ctx.drawImage(title,210,549,306,112);
+      ctx.drawImage(desPath,15,721,677,154);
+      ctx.drawImage(codePath,192,951,373,204);
       ctx.draw(false, function() {
         // 3. canvas画布转成图片
         wx.canvasToTempFilePath({

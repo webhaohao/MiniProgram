@@ -1,5 +1,6 @@
 <!--pages/main/main.wxml-->
 <view class="main">
+        <view class="logo"><image src="../images/logo.png" mode="widthFix"></image></view>
         <view class="">
             <swiper indicator-dots="{{indicatorDots}}"
                     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
@@ -10,12 +11,17 @@
             <block wx:for="{{postList}}">
               <swiper-item catchtouchmove="stopTouchMove">
                       <view class="content">
-                      <view class="title web-font">{{item.name}}</view>  
+                      <view class="title web-font">
+                            <rich-text nodes="{{item.name}}"></rich-text>      
+                     </view> 
+                      <view wx:if="{{item.intrPic}}" class="intrPic">
+                              <image src="{{item.intrPic}}" mode="widthFix"></image>
+                      </view> 
                         <block wx:for="{{item.content}}" wx:for-index="i" wx:for-item="option">
                                 <view class="web-font option {{item.animated ? 'animated':''}}" style="animation-delay:{{i/5+'s'}}" catchtap="optionTap" data-current="{{index}}" data-active="{{i}}">
                                        <view  data-current="{{index}}" class="{{item.select==i?'active':''}}" data-active="{{i}}"></view> 
                                        <view  data-current="{{index}}" data-active="{{i}}">
-                                                <rich-text data-current="{{index}}" data-active="{{i}}" wx:if="{{option.option}}">{{option.option}}</rich-text>
+                                                <rich-text data-current="{{index}}" data-active="{{i}}" wx:if="{{option.option}}"  nodes="{{option.option}}"></rich-text>
                                                 <image src="{{option.pic}}" wx:if="{{option.pic}}" mode="widthFix"></image>
                                         </view>
                                 </view>
@@ -25,5 +31,11 @@
             </block>
           </swiper>
         </view>
-              
+        <view class="animationE">
+                <image src="../images/sun.png" alt="" class="sun cloudMove" mode="widthFix"></image>
+                <image src="../images/cloud1.png" alt="" class="cloud1 cloudMoves" mode="widthFix"></image>
+                <image src="../images/cloud2.png" alt="" class="cloud2 cloudMoves" mode="widthFix"></image>
+                <image src="../images/cloud3.png" alt="" class="cloud3 cloudMoves" mode="widthFix"></image>
+                <image src="../images/plane.png" alt="" class="plane fly" mode="widthFix"></image>
+        </view>      
 </view>

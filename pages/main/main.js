@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-      postList :postData.postList,
+      // postList :postData.postList,
       duration:500,
       vertical:true,
       currentTab:0,
@@ -18,7 +18,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      console.log(this.data.postList);
       wx.setNavigationBarTitle({
         title: "清华经管学院EMBA"
       })
@@ -50,22 +49,22 @@ Page({
                   }
               }
               console.log(count);
-              if(count<=8 && count>=6){
+              if(count<=7 && count>=6){
                     obj ={
-                        title:'状元',
-                        des:'好看的皮囊千篇一律，学霸的灵魂万里挑一。只有清华适合你！'
+                        title:'../images/zhuangyuan.png',
+                        des:'../images/1.png'
                     }
               }
-              else if(count<=5 && count>=3){
+              else if(count<=5 && count>=4){
                     obj ={
-                      title:'榜眼',
-                      des:'犀利俏皮有思想，特立独行有风格。学霸气息突破宇宙，来清华与优秀者同行！'
+                      title:'../images/bangyan.png',
+                      des:'../images/2.png'
                     }
               }
               else{
                     obj ={
-                      title:'探花',
-                      des:'老师评语：看的透彻，答得糊涂！佛系洒脱更追求卓越，来清华读书成就更好的自己！'
+                      title:'../images/tanhua.png',
+                      des:'../images/3.png'
                     }
               }
               wx.setStorage({
@@ -88,14 +87,17 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    console.log(postData.postList);
+    this.setData({
+     // postList: postData.postList
+      postList:JSON.parse(JSON.stringify(postData.postList))
+    })
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
   },
 
   /**
@@ -109,7 +111,6 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
   },
 
   /**
